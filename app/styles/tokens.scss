@@ -1,0 +1,17 @@
+@use "./colors";
+
+// Emits the --background / --foreground custom properties that globals.css
+// and Tailwind's `@theme inline` (see app/globals.css) consume via var(...).
+// Edit the source values in _colors.scss, not here.
+
+:root {
+	--background: #{colors.$background-light};
+	--foreground: #{colors.$foreground-light};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #{colors.$background-dark};
+		--foreground: #{colors.$foreground-dark};
+	}
+}

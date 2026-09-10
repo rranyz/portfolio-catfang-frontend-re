@@ -1,0 +1,8 @@
+// Color tokens. Values only — nothing here emits CSS on its own.
+// Consumed by tokens.scss, which writes them out as CSS custom properties.
+
+$background-light: #ffffff;
+$foreground-light: #171717;
+
+$background-dark: #0a0a0a;
+$foreground-dark: #ededed;
