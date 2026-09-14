@@ -1,17 +1,61 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* --background / --foreground are defined in app/styles/tokens.scss (from
    app/styles/_colors.scss) and imported alongside this file in layout.tsx. */
+
+/**
+ * Tailwind CSS Utility Namespaces
+ *
+ * Colors:          --color-*          → bg-red-500, text-sky-300
+ * Fonts:           --font-*           → font-sans
+ * Font Size:       --text-*           → text-xl
+ * Font Weight:     --font-weight-*    → font-bold
+ * Letter Spacing:  --tracking-*       → tracking-wide
+ * Line Height:     --leading-*        → leading-tight
+ * Tab Size:        --tab-size-*       → tab-github
+ * Breakpoints:     --breakpoint-*     → sm:*
+ * Containers:      --container-*      → @sm:*, max-w-md
+ * Spacing/Sizing:  --spacing-*        → px-4, max-h-16
+ * Radius:          --radius-*         → rounded-sm
+ * Shadows:         --shadow-*         → shadow-md
+ * Inset Shadows:   --inset-shadow-*   → inset-shadow-xs
+ * Drop Shadows:    --drop-shadow-*    → drop-shadow-md
+ * Blur:            --blur-*           → blur-md
+ * Perspective:     --perspective-*    → perspective-near
+ * Zoom:            --zoom-*           → zoom-compact
+ * Aspect Ratio:    --aspect-*         → aspect-video
+ * Transitions:     --ease-*           → ease-out
+ * Animations:      --animate-*        → animate-spin
+ */
 
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+
+	--color-primary-000: var(--primary-000);
+	--color-primary-950: var(--primary-950);
+	--color-primary-900: var(--primary-900);
+	--color-primary-800: var(--primary-800);
+	--color-primary-700: var(--primary-700);
+	--color-primary-600: var(--primary-600);
+	--color-primary-500: var(--primary-500);
+	--color-primary-400: var(--primary-400);
+	--color-primary-300: var(--primary-300);
+	--color-primary-200: var(--primary-200);
+	--color-primary-100: var(--primary-100);
+	--color-primary-50: var(--primary-50);
+
+	--font-sans: var(--font-jost-sans);
+	--font-mono: var(--font-league-spartan-mono);
 }
 
+/**
+* Manual css
+*/
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+	background: var(--color-background);
+	color: var(--color-foreground);
+	font-family: var(--font-mono), Arial, Helvetica, sans-serif;
 }
