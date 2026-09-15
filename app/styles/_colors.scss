@@ -1,8 +1,73 @@
 // Color tokens. Values only — nothing here emits CSS on its own.
 // Consumed by tokens.scss, which writes them out as CSS custom properties.
 
-$background-light: #ffffff;
-$foreground-light: #171717;
+/**
+  Primary: #41BBC4
+  Hover: #34A3AB
+  Active: #2A858B
+  Dark text: #17494D
+  Light background: #EEF9FA
+  Border: #B5E3E6
+
+  Primary
+  #41BBC4
+
+  Primary Hover
+  #34A3AB
+
+  Primary Active
+  #2A858B
+
+  Primary Dark
+  #21666B
+
+  Primary Light
+  #8DD5DA
+
+  Primary 100
+  #D8F1F3
+
+  Primary 50
+  #EEF9FA
+
+======================================================================
+| Level   | Color | Hex           | Suggested use                    |
+| ------- | ----- | ------------- | -------------------------------- |
+| 950     | █     | `#12383B`     | Very dark text / deep background |
+| 900     | █     | `#17494D`     | Dark background                  |
+| 800     | █     | `#21666B`     | Dark buttons / hover             |
+| 700     | █     | `#2A858B`     | Strong accent                    |
+| 600     | █     | `#34A3AB`     | Primary dark                     |
+| **500** | **█** | **`#41BBC4`** | **Main / Primary color**         |
+| 400     | █     | `#65C7CD`     | Secondary accent                 |
+| 300     | █     | `#8DD5DA`     | Light accent                     |
+| 200     | █     | `#B5E3E6`     | Borders / backgrounds            |
+| 100     | █     | `#D8F1F3`     | Very light background            |
+| 50      | █     | `#EEF9FA`     | Subtle background                |
+======================================================================
+*/
+
+$primary-000: #0a0a0a;
+$primary-950: #12383b;
+$primary-900: #17494d;
+$primary-800: #21666b;
+$primary-700: #2a858b;
+$primary-600: #34a3ab;
+$primary-500: #41bbc4;
+$primary-400: #65c7cd;
+$primary-300: #8dd5da;
+$primary-200: #b5e3e6;
+$primary-100: #d8f1f3;
+$primary-50: #eef9fa;
+
+$background-light: #eef9fa;
+$foreground-light: #21666b;
 
 $background-dark: #0a0a0a;
-$foreground-dark: #ededed;
+$foreground-dark: #41bbc4;
+
+// $background-light: #ffffff;
+// $foreground-light: #171717;
+
+// $background-dark: #0a0a0a;
+// $foreground-dark: #ededed;

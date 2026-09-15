@@ -32,16 +32,16 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Available Scripts
 
-| Script                 | Description                                  |
-| ----------------------- | --------------------------------------------- |
-| `npm run dev`           | Start the dev server                          |
-| `npm run build`         | Production build                              |
-| `npm run start`         | Serve the production build                    |
-| `npm run lint`          | Run ESLint                                    |
-| `npm run format`        | Format the codebase with Prettier             |
-| `npm run format:check`  | Check formatting without writing changes      |
-| `npm run test:e2e`      | Run Playwright end-to-end tests               |
-| `npm run test:e2e:ui`   | Run Playwright tests in UI mode               |
+| Script                 | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `npm run dev`          | Start the dev server                     |
+| `npm run build`        | Production build                         |
+| `npm run start`        | Serve the production build               |
+| `npm run lint`         | Run ESLint                               |
+| `npm run format`       | Format the codebase with Prettier        |
+| `npm run format:check` | Check formatting without writing changes |
+| `npm run test:e2e`     | Run Playwright end-to-end tests          |
+| `npm run test:e2e:ui`  | Run Playwright tests in UI mode          |
 
 ## Testing
 

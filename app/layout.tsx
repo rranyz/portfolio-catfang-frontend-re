@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jost, League_Spartan } from "next/font/google";
 import "./styles/tokens.scss";
 import "./globals.css";
+import ThemeProvider from "@/components/theme-management/theme-provider";
+import MainHeader from "@/components/main-header";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const jostSans = Jost({
+	variable: "--font-jost-sans",
 	subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const leagueSpartanMono = League_Spartan({
+	variable: "--font-league-spartan-mono",
 	subsets: ["latin"],
 });
 
@@ -22,9 +24,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+			suppressHydrationWarning
+			className={`${leagueSpartanMono.variable} ${jostSans.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col">{children}</body>
+			<body className="min-h-full flex flex-col">
+				<ThemeProvider>
+					<MainHeader />
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
