@@ -1,23 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "@deemlol/next-icons";
 
 export default function ThemeToggle() {
 	const [dark, setDark] = useState(false);
-	const { theme, setTheme } = useTheme();
-
-	useEffect(() => {
-		if (theme === "dark") setDark(true);
-	}, []);
+	const { setTheme } = useTheme();
 
 	const toggleTheme = () => {
 		const nextTheme = !dark;
 
-		setDark(nextTheme);
+		setDark(() => nextTheme);
 
-		setTheme(nextTheme ? "dark" : "light");
+		setTheme(() => (nextTheme ? "dark" : "light"));
 	};
 
 	const SunIcon = <Sun size={30} color="#34A3AB" strokeWidth={1.5} />;
